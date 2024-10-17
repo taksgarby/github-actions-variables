@@ -3,13 +3,10 @@ name: Workflow Demo
 on: 
   push
 
-env:
-  ACCESS_ID: ${{ vars.ACCESS_ID }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Echo ACCESS_ID
-      run: echo $ACCESS_ID
+    - name: Echo ${{ vars.ACCESS_ID }}
+      run: echo ${{ vars.ACCESS_ID }}
